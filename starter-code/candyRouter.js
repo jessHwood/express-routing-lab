@@ -42,13 +42,13 @@ router.post('/', function(req, res){
 });
 
 router.put('/:id', function(req, res){
-		candies[req.params.id-1] = req.body;
+		candies[req.params.id-1] == req.body;
 		console.log(req.body);
 		res.end();
 });
 
 router.delete('/:id',function(req, res){
-		if(candies[req.params.id-1] === req.params.id) {
+		if(candies[req.params.id-1] == req.params.id) {
 		delete candies[req.params.id-1];
 	}
 		res.json("message: deleted");
