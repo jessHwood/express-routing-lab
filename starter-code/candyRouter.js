@@ -22,8 +22,6 @@ var candies = [
 		"color": "brown"
 		}];
 
-		var cleanCandies = JSON.stringify(candies);
-
 //What would need to go into candies
 //in order to pass our first test?
 
@@ -49,6 +47,12 @@ router.put('/:id', function(req, res){
 		res.end();
 });
 
+router.delete('/:id',function(req, res){
+		if(candies[req.params.id-1] === req.params.id) {
+		delete candies[req.params.id-1];
+	}
+		res.json("message: deleted");
+});
 
 // Fill out the rest of the routes here
 
