@@ -43,6 +43,13 @@ router.post('/', function(req, res){
 		res.json(req.body);
 });
 
+router.put('/:id', function(req, res){
+		candies[req.params.id-1] = req.body;
+		console.log(req.body);
+		res.end();
+});
+
+
 // Fill out the rest of the routes here
 
 module.exports = router;
